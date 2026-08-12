@@ -1,7 +1,11 @@
 # Student Portfolio — React and Vite
 
+**Live demo: https://react-student-portfolio.vercel.app**
+
 A single page portfolio built with React and Vite. Every section on the page is generated from
 one file: `src/data.js`.
+
+Free to use. Fork it, put your own details in `src/data.js`, and it is your portfolio.
 
 ## Running it
 
