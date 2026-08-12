@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4f46e5" />
+
+    <title>Student Portfolio</title>
+    <meta name="description" content="Student portfolio website built with React and Vite." />
+
+    <link rel="icon" href="data:," />
+
+    <script>
+        /* This short script has to run here, before the page is painted, so the
+           visitor never sees a flash of the light theme before the dark one loads.
+           It reads the theme saved on the last visit, and falls back to whatever
+           the operating system prefers. The useTheme hook takes over after this. */
+        var savedTheme = localStorage.getItem("portfolioTheme");
+
+        if (savedTheme === null && window.matchMedia("(prefers-color-scheme: dark)").matches === true) {
+            savedTheme = "dark";
+        }
+
+        if (savedTheme === "dark") {
+            document.documentElement.className = "dark";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
